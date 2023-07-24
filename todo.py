@@ -8,4 +8,5 @@ while True:
 	task = input(userInput)
 	
 	todoList.append(task)
-	print (todoList)
+	for todo in todoList:
+		print(todo)
