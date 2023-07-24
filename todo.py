@@ -6,7 +6,12 @@ todoList = []
 
 while True:
 	task = input(userInput)
-	
-	todoList.append(task)
-	for todo in todoList:
-		print(todo)
+	if task == './end':
+		break
+	else:
+		
+		
+		todoList.append(task)
+		
+		for todo in todoList:
+			print(todo)
