@@ -11,8 +11,8 @@ while True:
 			task = input(userInput)
 			todoList.append(task)
 		case 'show':
-			for todo in todoList:
-				print(todo)
+			for index, todo in enumerate(todoList):
+				print(index,todo)
 		case 'edit':
 			num = int(input('which one do you want to edit \nEnter number: '))
 			newTask = input('Enter the new task: ')
