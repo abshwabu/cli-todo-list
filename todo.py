@@ -5,7 +5,7 @@ userInput = "Enter a task: "
 todoList = []
 
 while True:
-	actions = input("what do you want todo? \nadd\nshow\nexit")
+	actions = input("what do you want todo? \nadd\nshow\nexit\n: ")
 	match actions:
 		case 'add':
 			task = input(userInput)
