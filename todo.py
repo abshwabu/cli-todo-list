@@ -45,6 +45,9 @@ while True:
 				print(index+1,todo)
 			num = int(input('which one do you finish \nEnter number: '))
 			todoList.pop(num-1)
+			file = open('list.txt','w')
+			file.writelines(todoList)
+			file.close()
 			
 		case 'exit':
 			break
