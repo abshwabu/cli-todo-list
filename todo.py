@@ -8,8 +8,10 @@ while True:
 	actions = input("what do you want todo? \nadd\nshow\nedit\ndone\nexit\n: ")
 	match actions:
 		case 'add':
-			task = input(userInput)
+			task = input(userInput) + '\n'
 			todoList.append(task)
+			file = open('list.txt','w')
+			file.writelines(todoList)
 		case 'show':
 			for index, todo in enumerate(todoList):
 				print(index+1,todo)
