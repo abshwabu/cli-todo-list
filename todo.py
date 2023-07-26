@@ -14,10 +14,14 @@ while True:
 			for index, todo in enumerate(todoList):
 				print(index+1,todo)
 		case 'edit':
+			for index, todo in enumerate(todoList):
+				print(index+1,todo)
 			num = int(input('which one do you want to edit \nEnter number: '))
 			newTask = input('Enter the new task: ')
 			todoList[num-1]= newTask
 		case 'done':
+			for index, todo in enumerate(todoList):
+				print(index+1,todo)
 			num = int(input('which one do you finish \nEnter number: '))
 			todoList.pop(num-1)
 			
