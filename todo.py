@@ -9,19 +9,32 @@ while True:
 	match actions:
 		case 'add':
 			task = input(userInput) + '\n'
+			file = open('list.txt','r')
+			todoList = file.readlines()
+			file.close()
 			todoList.append(task)
 			file = open('list.txt','w')
 			file.writelines(todoList)
+			file.close()
 		case 'show':
+			file = open('list.txt','r')
+			todoList = file.readlines()
+			file.close()
 			for index, todo in enumerate(todoList):
 				print(index+1,todo)
 		case 'edit':
+			file = open('list.txt','r')
+			todoList = file.readlines()
+			file.close()
 			for index, todo in enumerate(todoList):
 				print(index+1,todo)
 			num = int(input('which one do you want to edit \nEnter number: '))
 			newTask = input('Enter the new task: ')
 			todoList[num-1]= newTask
 		case 'done':
+			file = open('list.txt','r')
+			todoList = file.readlines()
+			file.close()
 			for index, todo in enumerate(todoList):
 				print(index+1,todo)
 			num = int(input('which one do you finish \nEnter number: '))
