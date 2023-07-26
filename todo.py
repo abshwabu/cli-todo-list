@@ -48,6 +48,20 @@ while True:
 			file = open('list.txt','w')
 			file.writelines(todoList)
 			file.close()
+		case 'clear all':
+			file = open('list.txt','r')
+			todoList = file.readlines()
+			file.close()
+			confirm = input('Are you sure[y/n]: ')
+			match confirm:
+				case 'y' | 'Y':
+					todoList.clear()
+					print('done')
+				case 'n' | 'N':
+					print('canceled')
+			file = open('list.txt','w')
+			file.writelines(todoList)
+			file.close()
 			
 		case 'exit':
 			break
