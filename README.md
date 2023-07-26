@@ -1,2 +1,2 @@
 # cli-todo-list
-A todo app in
+A todo app in command line interface
