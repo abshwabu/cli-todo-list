@@ -22,6 +22,9 @@ while True:
 			file.close()
 			for index, todo in enumerate(todoList):
 				print(index+1,todo)
+			file = open('list.txt','w')
+			file.writelines(todoList)
+			file.close()
 		case 'edit':
 			file = open('list.txt','r')
 			todoList = file.readlines()
@@ -31,6 +34,9 @@ while True:
 			num = int(input('which one do you want to edit \nEnter number: '))
 			newTask = input('Enter the new task: ')
 			todoList[num-1]= newTask
+			file = open('list.txt','w')
+			file.writelines(todoList)
+			file.close()
 		case 'done':
 			file = open('list.txt','r')
 			todoList = file.readlines()
