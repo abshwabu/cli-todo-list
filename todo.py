@@ -5,7 +5,7 @@ userInput = "Enter a task: "
 todoList = []
 
 while True:
-	actions = input("what do you want todo? \nadd\nshow\nedit\ndone\nexit\n: ")
+	actions = input("what do you want todo? \nadd\nshow\nedit\ndone\nclear all or \nexit\n: ")
 	match actions:
 		case 'add':
 			task = input(userInput) + '\n'
@@ -20,8 +20,12 @@ while True:
 			file = open('list.txt','r')
 			todoList = file.readlines()
 			file.close()
-			for index, todo in enumerate(todoList):
-				print(index+1,todo)
+			newTodo = []
+			for item in todoList:
+				newItem = item.strip('\n')
+				newTodo.append(newItem)
+			for index, task in enumerate(newTodo):
+				print(index+1,task)
 			file = open('list.txt','w')
 			file.writelines(todoList)
 			file.close()
