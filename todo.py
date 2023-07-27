@@ -47,7 +47,7 @@ while True:
 			todoList = file.readlines()
 			file.close()
 			for index, todo in enumerate(todoList):
-				
+				task = task.strip('\n')
 				print(index+1,todo)
 			num = int(input('which one do you finish \nEnter number: '))
 			todoList.pop(num-1)
